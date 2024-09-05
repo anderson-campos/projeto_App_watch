@@ -1,0 +1,160 @@
+/* 
+verde-claro: #7effb2;
+verde-escuro: #175a2c;
+cor-fundo: #3a3b42;
+fundo-vermelho: #7B3F3F;
+fundo-verde: #507F6A;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 28px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+svg {
+  width: 75px;
+  fill: #7effb2; /* fill = preenchimento */
+}
+
+h1 {
+  font-size: 32px;
+  transition: opacity 0.3s;
+}
+
+.geral {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tela {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #3a3b42;
+  width: 300px;
+  aspect-ratio: 400/490;
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 30px;
+  overflow: auto;
+}
+
+.tela::-webkit-scrollbar {
+  display: none;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  top: 0;
+  background-color: #3a3b42;
+}
+
+.exercicios {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.exercicio {
+  background-color: #175a2c;
+  /* width: 150px; */
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.atividade {
+  font-weight: 600;
+}
+
+.cronometro {
+  display: none;
+  margin-top: 25px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.botao {
+  width: 75px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.play,
+.pause {
+  background-color: #507f6a;
+}
+
+.close {
+  background-color: #7b3f3f;
+}
+
+.pause {
+  display: none;
+}
+
+.voltar {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tempo {
+  display: flex;
+  gap: 8px;
+  font-size: 45px;
+}
+
+.numero {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+}
+
+.iniciou .play {
+  display: none;
+}
+
+.iniciou .pause {
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+.tela--cronometro .cronometro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tela--cronometro .exercicio {
+  display: none;
+}
+
+.tela--cronometro h1 {
+  opacity: 0;
+}
